@@ -1,266 +1,141 @@
 import { useState } from 'react'
 import perrito from './assets/perritos.png';
+import { Header } from './components/header';
+import{ Footer} from './components/Footer';
+
 //import './App.css'
 
 function App() {
  
   return (
-    <main className="p-10">
+    <>
+   <Header />
+    <main className='flex flex-col gap-28 mb-40'>
 
-      <div className="flex flex-col  gap-20">
-
-      <button type = "button" className=" transition-colors duration-[2s] bg-blue-300 text-white px-4 py-2 rounded-lg block w-fit
-      hover:bg-blue-800 hover:font-bold hover:scale-110">
-        principal
-      </button>
-
-      <button type="button" className="px-4 py-2 rounded-lg block w-fit bg-transparent border-2 border-blue-600 hover:bg-blue-600 hover:text-white">Show more</button>
-
-      <button type="button" className="px-4 py-2 rounded-lg block w-fit bg-red-600 text-white hover:bg-red-800 active:bg-red-950">button active</button>
-
-      <button type="button" className="px-4 py-2 rounded-lg block w-fit bg-neutral-600 text-white font-bold hover:bg-neutral-800 focus:bg-transparent focus:text-neutral-800 focus:border-2  focus:border-neutral-800">button focus</button>
-
-      <button type="button" className=" transition-all px-4 py-2 rounded-lg block w-fit font-bold bg-transparent text-yellow-600 outline outline-2 outline-yellow-600 hover:bg-yellow-600 hover:text-white focus:bg-yellow-600 focus:text-white focus:outline-offset-4 ">button focus</button>
-
-       <button type = "button" className="duration-1000 ease-in-cubic bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit
-       hover:bg-blue-800 hover:pl-80 ">
-        principal
-      </button>
-
-      <button type = "button" className=" duration-1000 ease-in-out-back bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit
-       hover:bg-blue-800 hover:pl-80 ">
-        principal
-      </button>
+      <section className="w-full h-[600px] bg-cover bg-[url('/paisaje.avif')]"> 
+       <div className='w-full h-full bg-gradient-to-t from-black/80 to-black/20'>
+          <div className='max-w-screen-xl w-full mx-auto pt-20'>
+            <h1 className='text-5xl font-black text-center'>TAILWIND  CSS TEMPLATE TITLE</h1>
+            <h2 className='text-2xl font-bold text-center pt-4'>Subtitle of course talwind</h2>
+            
+            <a href="#" className='w-fit p-4 mx-auto mt-8 flex items-center gap-2 bg-blue-700 hover:bg-blue-900 rounded-md text-white font-bold'>
+              Go more
+              <RigthIcon />
+            </a>
 
 
-      <div className="animate-floating p-8 bg-sky-600 rounded-full w-fit text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
-</svg>
-
-      </div>
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-      <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg mt-20">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      
-
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-
-
-
-    <div className="mt-20">
-      <div className="flex flex-wrap justify-center gap-10">
-
-      <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-       <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-      </div>
-    </div>
-
-    <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-
-
-    <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      
-
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-
-     <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      
-
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-
-     <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      
-
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-
-
-     <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      
-
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-    
-    
-     <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      
-
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-
-    <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      
-
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-
-     <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-       <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-      </div>
-    </div>
-
-    <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-    
-
-     <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-       <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-      </div>
-    </div>
-
-    <div className="overflow-hidden rounded-lg border border-black/20 max-w-lg">
-      <img src={perrito} alt="perrito" className="w-full h-40 object-cover" />
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Tituloo</h1>
-        <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aliquam atque rem repudiandae, fuga doloremque, ex velit commodi dicta nemo dignissimos. </p>
-      
-      <a href="#" className="bg-blue-600 text-white px-4 py-2 rounded-lg block w-fit mt-2">show more</a>
-
-      </div>
-    </div>
-
-      </div>
-    </div>
-
-
-
-    <div className="mt-20">
-    <a href="#user" className="block w-fit p-2 bg-gradient-to-tr from-emerald-300 to-sky-400 rounded-xl">
-        <div className="flex gap-3 items-center">
-          <img src="https://i.pinimg.com/474x/5d/69/42/5d6942c6dff12bd3f960eb30c5fdd0f9.jpg" className="w-14 h-14 rounded-full" alt="" />
-           
-           <div>
-           <h1 className="text-xl font-bold">Username</h1>
-           <h2 className="text-blue-600">@vaniti user</h2>
           </div>
         </div>
-      </a>
-
-      <div className="w-96 h-40 bg-black mt-20"></div>
-
-      <div className="w-[560px] h-40 bg-sky-600"></div>
-
-      <div className="w-[860px] h-40 bg-[#74546c]"></div>
-
-      <div className="w-120 h-40 text-blue-gris font-black text-6xl">sadas</div>
-
-      <div className="w-160 h-40 bg-lime-500"></div>
-
-      <div className="mt-20 w-40 h-40 bg-red-pink-white"></div>
-
-      <div className="mt-20 w-40 h-40 bg-red-pink-black"></div>
+      </section>
 
 
-      <div className="flex mt-20">
-        <div className="w-40 h-40 bg-green.lol-50"></div>
-        <div className="w-40 h-40 bg-green.lol-100"></div>
-        <div className="w-40 h-40 bg-green.lol-200"></div>
-        <div className="w-40 h-40 bg-green.l "></div>
+      <section className='max-w-screen-xl mx-full mx-auto flex flex-col gap-28'>
+        <div className='flex justify-between items-center gap-5'>
 
-      </div>
-      
-      
-      </div>
+          <div className='flex flex-col  max-w-lg gap-4 basis-1/3'>
+            <h1 className='text-3xl font-bold'>
+                About tailwind css
+            </h1>
 
-    </main>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam fugiat dolor molestiae assumenda sed praesentium commodi itaque recusandae facilis ducimus at a qui debitis provident, doloremque quidem blanditiis facere quod!
+            </p>
+            <a href="#" className='w-fit p-4  flex items-center gap-2 bg-neutral-700 hover:bg-neutral-900 rounded-md text-white font-bold'>
+              Go more
+              <RigthIcon />
+            </a>
+
+          </div>
+            
+            <img src="/paisaje.avif" alt="" className='max-w-xl w-full object-cover aspect-video rounded-md' />
+
+        </div>
+
+
+
+        <div className='flex justify-evenly  gap-5'>
+
+          <div className='flex flex-col gap-4 basis-1/3'> 
+             <img src="/paisaje.avif" alt="" className='w-full object-cover aspect-video rounded-md' />
+            <h1 className='text-xl font-bold'>Title card</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam repellendus cum doloremque odio nostrum eum fugiat cupiditate deleniti, pariatur iure ratione consequatur aspernatur quo suscipit ipsum nam praesentium impedit autem.
+
+            </p>
+            <a href="#" className='w-fit p-4  flex items-center gap-2 bg-transparent hover:bg-neutral-900 rounded-md text-white font-bold border border-white'>
+              Read more
+              <RigthIcon />
+            </a>
+          </div>
+
+
+          <div className='flex flex-col gap-4 basis-1/3'> 
+             <img src="/paisaje.avif" alt="" className='w-full object-cover aspect-video rounded-md' />
+            <h1 className='text-xl font-bold'>Title card</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam repellendus cum doloremque odio nostrum eum fugiat cupiditate deleniti, pariatur iure ratione consequatur aspernatur quo suscipit ipsum nam praesentium impedit autem.
+
+            </p>
+            <a href="#" className='w-fit p-4  flex items-center gap-2 bg-transparent hover:bg-neutral-900 rounded-md text-white font-bold border border-white'>
+              Read more
+              <RigthIcon />
+            </a>
+          </div>
+
+          <div className='flex flex-col gap-4 basis-1/3'> 
+             <img src="/paisaje.avif" alt="" className='w-full object-cover aspect-video rounded-md' />
+            <h1 className='text-xl font-bold'>Title card</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam repellendus cum doloremque odio nostrum eum fugiat cupiditate deleniti, pariatur iure ratione consequatur aspernatur quo suscipit ipsum nam praesentium impedit autem.
+
+            </p>
+            <a href="#" className='w-fit p-4  flex items-center gap-2 bg-transparent hover:bg-neutral-900 rounded-md text-white font-bold border border-white'>
+              Read more
+              <RigthIcon />
+            </a>
+          </div>
+          
+
+        </div>
+
+        
+          <div className='grid grid-cols-3 gap-4'>
+            <img src="/paisaje.avif" alt="" className='w-full h-full object-cover rounded-md col-span-2 aspect-video' />
+           
+            <img src="/paisaje.avif" alt="" className='w-full h-full object-cover rounded-md aspect-video' />
+            
+            <img src="/paisaje.avif" alt="" className='w-full h-full object-cover rounded-md aspect-video' />
+            
+            <img src="/paisaje.avif" alt="" className='w-full h-full object-cover rounded-md col-span-2 aspect-video' />
+           
+            
+            <img src="/paisaje.avif" alt="" className='w-full h-full object-cover rounded-md col-span-2 aspect-video' />
+           
+            <img src="/paisaje.avif" alt="" className='w-full h-full object-cover rounded-md aspect-video' />
+            
+            <img src="/paisaje.avif" alt="" className='w-full h-full object-cover rounded-md aspect-video' />
+            
+            <img src="/paisaje.avif" alt="" className='w-full h-full object-cover rounded-md col-span-2 aspect-video' />
+           
+              
+
+
+
+
+          </div>
+
+      </section>
+        
+    </main> 
+
+    <Footer/>
+
+    </>
   )
 }
+
+const RigthIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+</svg>
+
+)
 
 export default App
